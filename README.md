@@ -1,5 +1,5 @@
-##Grade received: 
-###Meets expectations
+## Grade received: 
+### Meets expectations
 
 ### Assignment tested the following weekly learning objectives:
 
