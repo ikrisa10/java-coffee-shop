@@ -1,0 +1,9 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+  <body>
+    <h2>Your submission errors: </h2>
+    <p class="caffeine-rating-0" th:text="${errors}"></p></br>
+    <a href="/products/new">Try again! </a></br>
+    <a href="/products">Or return to Main</a>
+  </body>
+</html>

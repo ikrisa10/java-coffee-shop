@@ -1,0 +1,37 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+  <body>
+    <h1>Add a Product</h1>
+
+    <form action="#" th:action="@{/products}" th:object="${product}" method="POST">
+      <div>
+        <label th:for="name">Name:</label></br>
+        <input th:id="name" type="text" th:field="*{name}" />
+      </div></br>
+
+      <div>
+        <label th:for="description">Description:</label></br>
+        <textarea th:id="description"  th:field="*{description}" ></textarea>
+      </div><br>
+
+      <div>
+        <label th:for="price">Price:</label></br>
+        <input th:id="price" type="number" th:field="*{price}" step="any" />
+      </div><br>
+
+      <div>
+        <label th:for="caffeineRating">Caffeine Rating</br>(0 - Low, 1 - Medium, 2 - High): </label>
+        <select id="caffeineRating" th:field="*{caffeineRating}" >
+          <option value="" th:selected ></option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </div></br>
+
+      <div>
+        <input type="submit" value="Add This Product" />
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+  <body>
+    <h1>Products</h1>
+    <ul>
+      <div class="products" th:each="product : ${products}" th:remove="tag">
+        <li class="product" th:object="${product}">
+          <span th:text="*{'Name: ' + name + ', Price: $' + price}"></span></br>
+          <span th:class="*{indicator}" th:text="*{'Caffeine Rating: ' + caffeineRating}"></span></br>
+          <a th:href="@{/products/show/{id}(id=*{id})}">Learn more</a></br>
+          <span>=======================</span>
+        </li>
+      </div>
+    </ul></br>
+    <a href="/products/new">Add a New Product</a>
+  </body>
+</html>
